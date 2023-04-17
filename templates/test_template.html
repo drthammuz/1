@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Template</title>
+</head>
+<body>
+    <h3>Test Sales Form</h3>
+    <form action="{{ url_for('register_sale') }}" method="POST">
+        {{ sales_form.csrf_token }}
+        {{ sales_form.date_time.label }}: {{ sales_form.date_time }}
+        {{ sales_form.amount.label }}: {{ sales_form.amount }}
+        {{ sales_form.currency.label }}: {{ sales_form.currency }}
+        {{ sales_form.comment.label }}: {{ sales_form.comment }}
+        {{ sales_form.submit }}
+    </form>
+</body>
+</html>
